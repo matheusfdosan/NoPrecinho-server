@@ -8,6 +8,7 @@ const registerService = async (email, password) => {
   const isCreated = await createNewUser(email, password)
   if (!isCreated) throw new Error("Error to create new user!")
   return {
+    sucess: true,
     message: "User Successfully Created!",
   }
 }
